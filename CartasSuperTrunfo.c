@@ -1,4 +1,7 @@
 #include <stdio.h>
+#include <locale.h>
+#include <ctype.h>
+#include <string.h>
 
 // Desafio Super Trunfo - Países
 // Tema 1 - Cadastro das Cartas
@@ -36,10 +39,10 @@ int main() {
 	scanf("%c", &estado_a);
 
 	printf("Informe o código da carta, com a letra do Estado seguida de um número(ex: A01, B03): ");
-	scanf("%s", &codigo_a);
+	scanf(" %s", &codigo_a[4]);
 
 	printf("Informe o nome da cidade: ");
-	scanf("%s", &cidade_a);
+	scanf(" %s", &cidade_a[50]);
 
 	printf("Informe o numero de habitantes: ");
 	scanf("%i", &pop_a);
@@ -74,13 +77,13 @@ int main() {
 	printf("\n\n   Vamos para os dados da Carta 2   \n\n");
     	
     printf("Escolha outra letra entre A e H diferente da anterior: ");
-	scanf("%c", &estado_b);
+	scanf(" %c", &estado_b);
 
 	printf("Informe o código da carta com a letra do Estado seguida de um número(ex: A01, B03): ");
-	scanf("%s", &codigo_b);
+	scanf(" %s", &codigo_b[4]);
 
 	printf("Informe o nome da cidade: ");
-	scanf("%s", &cidade_b);
+	scanf(" %s", &cidade_b[50]);
 
 	printf("Informe o numero de habitantes: ");
 	scanf("%i", &pop_b);
@@ -107,7 +110,9 @@ int main() {
 	printf("Área: %.3f km² \n", area_b);
 	
 	printf("PIB: R$ %.3f bilhões de reais \n", pib_b);
-	
+
 	printf("Número de pontos Turísticos: %i \n", turismo_b);
+
     return 0;
+
 }
