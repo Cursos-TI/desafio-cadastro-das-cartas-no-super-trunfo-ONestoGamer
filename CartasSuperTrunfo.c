@@ -34,7 +34,7 @@ int main() {
 	int turismo_a, turismo_b;	        //variavel pontos turisticos
 	
 	printf("Escolha uma letra entre A e H: ");
-	scanf("%c", &estado_a);
+	scanf(" %c", &estado_a);
 
 	printf("Informe o código da carta, com a letra do Estado seguida de um número(ex: A01, B03): ");
 	scanf(" %s", codigo_a);
