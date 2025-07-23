@@ -37,10 +37,10 @@ int main() {
 	scanf("%c", &estado_a);
 
 	printf("Informe o código da carta, com a letra do Estado seguida de um número(ex: A01, B03): ");
-	scanf(" %s", &codigo_a[4]);
+	scanf(" %s", codigo_a);
 
 	printf("Informe o nome da cidade: ");
-	scanf(" %s", &cidade_a[50]);
+	scanf(" %49[^\n]", cidade_a);
 
 	printf("Informe o numero de habitantes: ");
 	scanf("%i", &pop_a);
@@ -78,10 +78,10 @@ int main() {
 	scanf(" %c", &estado_b);
 
 	printf("Informe o código da carta com a letra do Estado seguida de um número(ex: A01, B03): ");
-	scanf(" %s", &codigo_b[4]);
+	scanf(" %s", codigo_b);
 
 	printf("Informe o nome da cidade: ");
-	scanf(" %s", &cidade_b[50]);
+	scanf(" %49[^\n]", cidade_b);
 
 	printf("Informe o numero de habitantes: ");
 	scanf("%i", &pop_b);
@@ -111,6 +111,5 @@ int main() {
 
 	printf("Número de pontos Turísticos: %i \n", turismo_b);
 
-    return 0;
-
+	return 0;
 }
