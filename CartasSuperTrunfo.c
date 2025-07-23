@@ -22,7 +22,6 @@ int main() {
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
 
     //começando a partir daqui.
-
     //variaveis
 	char estado_a;                           //variaveis para armazenar os estados
 	char estado_b;			      			       
@@ -34,7 +33,6 @@ int main() {
 	float area_a, area_b, pib_a, pib_b;	 //variavel area em km² e PIB
 	int turismo_a, turismo_b;	        //variavel pontos turisticos
 	
-
 	printf("Escolha uma letra entre A e H: ");
 	scanf("%c", &estado_a);
 
