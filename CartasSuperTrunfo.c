@@ -3,36 +3,25 @@
 #include <ctype.h>
 #include <string.h>
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-//Teste larissa
-
-int main() {
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
-    
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
-    
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
-
-    //começando a partir daqui.
-    //variaveis
-	char estado_a;                           //variaveis para armazenar os estados
+int main(){
+	setlocale(LC_ALL, "PORTUGUESE");
+//variaveis
+	char estado_a;                             //variaveis para armazenar os estados
 	char estado_b;			      			       
-	char codigo_a[4];						//variaveis para armazenar os codigos das cidades
+	char codigo_a[4];						  //variaveis para armazenar os codigos das cidades
 	char codigo_b[4]; 				
-	char cidade_a[50];                     //variaveis para armazenar as cidades
+	char cidade_a[50];                      //variaveis para armazenar as cidades
 	char cidade_b[50];                      
-	int pop_a, pop_b;				      //variavel população
-	float area_a, area_b, pib_a, pib_b;	 //variavel area em km² e PIB
-	int turismo_a, turismo_b;	        //variavel pontos turisticos
+	int pop_a, pop_b;				       //variavel população
+	float area_a, area_b, pib_a, pib_b;	  //variavel area em km² e PIB
+	int turismo_a, turismo_b;	         //variavel pontos turisticos
+	float densidade_a, densidade_b; //variavel densidade demografica
+	float pib_per_capita_a, pib_per_capita_b; //variavel PIB per capita
 	
+	printf("*** Jogo Super Trunfo ***\n\n");
+	printf("==============================\n");
+	printf("Vamos para os dados da Carta 1   \n\n");
+
 	printf("Escolha uma letra entre A e H: ");
 	scanf(" %c", &estado_a);
 
@@ -54,6 +43,11 @@ int main() {
 	printf("Informe o número de pontos turísticos: ");
 	scanf("%i", &turismo_a);
 
+	//calculo da densidade demografica
+	densidade_a = pop_a / area_a;
+	//calculo do PIB per capita
+	pib_per_capita_a = (pib_a * 1000000000) / pop_a;
+
 	printf("\n*** Carta 1: *** \n");
 	
 	printf("Estado: %c \n", estado_a);
@@ -64,15 +58,19 @@ int main() {
 	
 	printf("População: %i \n", pop_a);
 	
-	printf("Área: %.3f km² \n", area_a);
+	printf("Área: %.2f km² \n", area_a);
 	
-	printf("PIB: R$ %.3f bilhões de reais \n", pib_a);
+	printf("PIB: R$ %.2f bilhões de reais \n", pib_a);
 	
-	printf("Número de pontos Turísticos: %i \n\n", turismo_a);
+	printf("Número de pontos Turísticos: %i \n", turismo_a);
+
+	printf("Densidade Demográfica: %.2f habitantes por km² \n", densidade_a);
+
+	printf("PIB per capita: R$ %.2f \n", pib_per_capita_a);
 	
 	//dados da carta 2
     
-	printf("\n\n   Vamos para os dados da Carta 2   \n\n");
+	printf("\n\nVamos para os dados da Carta 2  \n\n");
     	
     printf("Escolha outra letra entre A e H diferente da anterior: ");
 	scanf(" %c", &estado_b);
@@ -94,6 +92,11 @@ int main() {
 
 	printf("Informe o número de pontos turísticos: ");
 	scanf("%i", &turismo_b);
+
+	//calculo da densidade demografica
+	densidade_b = pop_b / area_b;
+	//calculo do PIB per capita
+	pib_per_capita_b = (pib_b * 1000000000) / pop_b;
 	
 	printf("\n*** Carta 2: *** \n");
 	
@@ -105,11 +108,16 @@ int main() {
 	
 	printf("População: %i \n", pop_b);
 	
-	printf("Área: %.3f km² \n", area_b);
+	printf("Área: %.2f km² \n", area_b);
 	
-	printf("PIB: R$ %.3f bilhões de reais \n", pib_b);
-
+	printf("PIB: R$ %.2f bilhões de reais \n", pib_b);
+	
 	printf("Número de pontos Turísticos: %i \n", turismo_b);
 
+	printf("Densidade Demográfica: %.2f habitantes por km² \n", densidade_b);
+
+	printf("PIB per capita: R$ %.2f \n", pib_per_capita_b);
+
 	return 0;
+	
 }
