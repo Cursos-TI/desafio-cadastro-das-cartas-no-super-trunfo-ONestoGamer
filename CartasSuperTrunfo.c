@@ -15,7 +15,7 @@ int main(){
 	int pop_a, pop_b;				       //variavel população
 	float area_a, area_b, pib_a, pib_b;	  //variavel area em km² e PIB
 	int turismo_a, turismo_b;	         //variavel pontos turisticos
-	float densidade_a, densidade_b; //variavel densidade demografica
+	float densidade_a, densidade_b; 	//variavel densidade demografica
 	float pib_per_capita_a, pib_per_capita_b; //variavel PIB per capita
 	
 	printf("*** Jogo Super Trunfo ***\n\n");
